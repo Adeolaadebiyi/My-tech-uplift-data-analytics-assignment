@@ -1,0 +1,28 @@
+# Define a function called word_counter
+def word_counter(text):
+    """
+    This function counts the number of words in a given text.
+    
+    Parameters:
+    - text (str): The input text to count words from.
+    
+    Returns:
+    - count (int): The number of words in the text.
+    """
+    # Split the text into words using whitespace as separator
+    words = text.split()
+    
+    # Count the number of words
+    count = len(words)
+    
+    # Return the count of words
+    return count
+
+# Get input text from the user
+text = input("Adeola is a girl : ")
+
+# Call the word_counter function with the input text
+word_count = word_counter('Adeola is a girl')
+
+# Display the word count to the user
+print("The number of words in the text is:", word_count)
