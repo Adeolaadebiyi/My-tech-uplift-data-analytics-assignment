@@ -1,0 +1,137 @@
+import  numpy as np
+zeros_array = np. zeros(10)
+print (zeros_array )
+array_range = np. arange(10, 50)
+print (array_range )
+ones_matrix = np. ones ((2, 2), dtype = int)
+print (ones_matrix)
+
+identity_matrix = np.eye (3)
+print (identity_matrix )
+# Assuming X is already defined
+X = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+ones_array = np.ones_like(X)
+print(ones_array)
+
+X = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+zeros_matrix = np.zeros_like(X)
+
+print(zeros_matrix)
+new_matrix = np. full_like (X, 7)
+print (new_matrix)
+matrix_fives = np.full((4, 4), 5, dtype=int)
+
+print(matrix_fives)
+# Create a numpy array with numbers from 1 to 10
+X = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+# Create a numpy array with the odd numbers between 1 to 10
+Y = np.array([1, 3, 5, 7, 9])
+
+# Create a numpy array with numbers from 1 to 10, in descending order
+Z = np.array([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
+
+# Create a 3*3 numpy matrix, filled with values ranging from 0 to 8
+matrix = np.arange(9).reshape(3, 3)
+
+# Show the memory size of the given Z numpy matrix
+print(Z.nbytes)
+
+# Given the X numpy array, show its first element
+print(X[0])
+
+# Given the X numpy array, show its last element
+print(X[-1])
+
+# Given the X numpy array, show its first three elements
+print(X[:3])
+
+# Given the X numpy array, show all middle elements
+print(X[1:-1])
+
+# Given the X numpy array, show the elements in reverse position
+print(X[::-1])
+
+# Given the X numpy array, show the elements in an odd position
+print(X[::2])
+
+# Given the X numpy matrix, show the first row elements
+print(matrix[0])
+
+# Given the X numpy matrix, show the last row elements
+print(matrix[-1])
+
+# Given the X numpy matrix, show the first element on first row
+print(matrix[0, 0])
+
+# Given the X numpy matrix, show the last element on last row
+print(matrix[-1, -1])
+
+# Given the X numpy matrix, show the middle row elements
+print(matrix[1, :])
+
+# Given the X numpy matrix, show the first two elements on the first two rows
+print(matrix[:2, :2])
+
+# Given the X numpy matrix, show the last two elements on the last two rows
+print(matrix[-2:, -2:])
+
+# Convert the given integer numpy array to float
+X_float = X.astype(float)
+
+# Reverse the given numpy array (first element becomes last)
+X_reversed = np.flip(X)
+
+# Order (sort) the given numpy array
+X_sorted = np.sort(X)
+
+# Given the X numpy array, set the fifth element equal to 1
+X[4] = 1
+
+# Given the X numpy array, change the 50 with a 40
+X[X == 5] = 40
+
+# Given the X numpy matrix, change the last row with all 1
+matrix[-1] = 1
+
+# Given the X numpy matrix, change the last item on the last row with a 0
+matrix[-1, -1] = 0
+
+# Given the X numpy matrix, add 5 to every element
+matrix += 5
+
+# Given the X numpy array, make a mask showing negative elements
+mask_negative = X < 0
+
+# Given the X numpy array, get the negative elements
+negative_elements = X[X < 0]
+
+# Given the X numpy array, get numbers higher than 5
+higher_than_5 = X[X > 5]
+
+# Given the X numpy array, get numbers higher than the elements mean
+higher_than_mean = X[X > np.mean(X)]
+
+# Given the X numpy array, get numbers equal to 2 or 10
+equal_to_2_or_10 = X[(X == 2) | (X == 10)]
+
+# Given the X numpy array, return True if none of its elements is zero
+none_zero_elements = not np.any(X == 0)
+
+# Given the X numpy array, return True if any of its elements is zero
+any_zero_elements = np.any(X == 0)
+
+# Given the X numpy array, show the sum of its elements
+sum_of_elements = np.sum(X)
+
+# Given the X numpy array, show the mean value of its elements
+mean_of_elements = np.mean(X)
+
+# Given the X numpy array, show the max value of its elements
+max_of_elements = np.max(X)
+
+# Given the X numpy matrix, show the sum of its columns
+sum_of_columns = np.sum(matrix, axis=0)
+
+# Given the X numpy matrix, show the mean value of its rows
+mean_of_rows = np.mean(matrix, axis=1)
