@@ -1,0 +1,83 @@
+import numpy as np
+import pandas as pd
+
+print(pd.__version__)
+
+# Create an empty panda series
+empty_series = pd.Series(dtype='float64')
+
+# Given the X python list convert it to a Y panda series
+X = [1, 2, 3, 4, 5]
+Y = pd.Series(X, dtype='int64')
+
+# Given the X panda series, name it 'My letter'
+Y.name = 'My letter'
+
+# Given the X panda series, show its values
+print(Y.values)
+
+# Assign index names to the given X panda series
+Y.index = ['a', 'b', 'c', 'd', 'e']
+
+# Given the X panda series, show its first element
+print(Y.iloc[0])
+
+# Given the X panda series, show the elements in reverse position
+print(Y.iloc[::-1])
+
+# Given the X panda series, show the first and last elements
+print(Y.iloc[[0, -1]])
+
+# Given the X panda series, show its last element
+print(Y.iloc[-1])
+
+# Given the X panda series, show all middle elements
+print(Y.iloc[1:-1])
+
+# Convert the integer panda series to float
+Y = Y.astype(float)
+
+# Given the X panda series, set the fifth element equal to 10
+Y.iloc[4] = 10
+
+# Given the X panda series, change all the middle elements to 0
+Y.iloc[1:-1] = 0
+
+# Reverse the given panda series (first element becomes last)
+Y = Y.iloc[::-1]
+
+# Order (sort) the given panda series
+Y = Y.sort_values()
+
+# Given the X panda series, make a mask showing the negative elements
+mask_negative = Y < 0
+
+# Given the X panda series, get the negative elements
+negative_elements = Y[Y < 0]
+
+# Given the X panda series, add 5 to every element
+Y += 5
+
+# Given the X panda series, get numbers higher than 5
+numbers_higher_than_5 = Y[Y > 5]
+
+# Given the X panda series, get numbers higher than the elements mean
+numbers_higher_than_mean = Y[Y > Y.mean()]
+
+# Given the X panda series, return true if none of its elements is zero
+none_zero_elements = not Y.eq(0).any()
+
+# Given the X panda series, return true if any of its elements is zero
+any_zero_elements = Y.eq(0).any()
+
+# Given the X panda series, show the mean value of its elements
+mean_value = Y.mean()
+
+# Given the X panda series, show the max value of its elements
+max_value = Y.max()
+
+# Given the X panda series, show the sum of its elements
+sum_of_elements = Y.sum()
+
+# Given the X panda series, get numbers equal to 2 or 10
+numbers_equal_to_2_or_10 = Y[(Y == 2) | (Y == 10)]
